@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Sinowealth IDE Setup Guide - Keil C51, ARM MDK Configuration</title>
+    <meta name="description" content="Complete setup guide for development environments for Sinowealth MCUs. Keil C51, ARM MDK, and toolchain installation guides.">
+    <meta name="keywords" content="sinowealth,ide-setup,keil-c51,arm-mdk,development-environment,toolchain,mcu-development">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Sinowealth IDE Setup Guide - Keil C51, ARM MDK Configuration">
+    <meta property="og:description" content="Complete setup guide for development environments for Sinowealth MCUs. Keil C51, ARM MDK, and toolchain installation guides.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sinowealth.elec-distributor.com/support/ide-setup/">
+    <meta property="og:image" content="https://sinowealth.elec-distributor.com/images/og-image-ide-setup.jpg">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sinowealth IDE Setup Guide - Keil C51, ARM MDK Configuration">
+    <meta name="twitter:description" content="Complete setup guide for development environments for Sinowealth MCUs. Keil C51, ARM MDK, and toolchain installation guides.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sinowealth.elec-distributor.com/support/ide-setup/">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/utilities.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/css/main.css" as="style">
+</head>
+<body id="support">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <a href="/" class="logo-link">
+                        <h1 class="logo">Sinowealth Distributor</h1>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                
+                <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a href="/products/" class="nav-link">Products</a>
+                            <ul class="submenu">
+                                <li><a href="/products/mcu-8bit/">8-bit MCU</a></li>
+                                <li><a href="/products/mcu-32bit/">32-bit MCU</a></li>
+                                <li><a href="/products/bms/">BMS</a></li>
+                                <li><a href="/products/display-drivers/">Display Drivers</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/solutions/" class="nav-link">Solutions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/support/" class="nav-link" aria-current="page">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/news/" class="nav-link">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about/" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/contact/" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/" itemprop="item" title="Home">
+                        <span itemprop="name">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/support/" itemprop="item" title="Support">
+                        <span itemprop="name">Support</span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">IDE Setup</span>
+                    <meta itemprop="position" content="3" />
+                </li>
+            </ol>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main">
+        
+        <!-- Support Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content text-center">
+                    <h1 class="hero-title">IDE Setup Guide</h1>
+                    <p class="hero-description">
+                        Complete setup guides for development environments for Sinowealth products
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- IDE Setup Introduction -->
+        <section class="support-intro">
+            <div class="container">
+                <div class="intro-content">
+                    <h2 class="section-title">Setting Up Development Environments</h2>
+                    <div class="intro-text">
+                        <p>
+                            Setting up a proper development environment is crucial for efficient development 
+                            with Sinowealth products. This section provides step-by-step instructions for 
+                            installing and configuring the necessary tools for both 8-bit and 32-bit Sinowealth MCUs.
+                        </p>
+                        <p>
+                            Sinowealth MCUs are supported by industry-standard development tools. For 8-bit 
+                            MCUs based on enhanced 8051 cores, Keil C51 is the primary development environment. 
+                            For 32-bit ARM Cortex-M0 MCUs, ARM MDK (Keil) or other ARM-compatible IDEs can be used.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- IDE Setup Categories -->
+        <section class="support-categories">
+            <div class="container">
+                <h2 class="section-title">IDE Setup Guides</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <img src="/images/svg/keil-c51.svg" alt="Keil C51 Setup Icon" width="64" height="64">
+                        </div>
+                        <h3 class="product-title">Keil C51 Setup</h3>
+                        <p class="product-description">
+                            Complete installation and configuration guide for developing with 8-bit Sinowealth MCUs.
+                        </p>
+                        <div class="product-features">
+                            <ul>
+                                <li>Software installation</li>
+                                <li>Device support packs</li>
+                                <li>Project configuration</li>
+                                <li>Debugging setup</li>
+                            </ul>
+                        </div>
+                        <a href="/support/ide-setup/keil-c51/" class="product-link btn btn-primary">Setup Guide</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <img src="/images/svg/arm-mdk.svg" alt="ARM MDK Setup Icon" width="64" height="64">
+                        </div>
+                        <h3 class="product-title">ARM MDK Setup</h3>
+                        <p class="product-description">
+                            Guide to setting up ARM development environment for 32-bit Sinowealth MCUs.
+                        </p>
+                        <div class="product-features">
+                            <ul>
+                                <li>ARM compiler configuration</li>
+                                <li>CMSIS libraries</li>
+                                <li>Device support</li>
+                                <li>Debugger configuration</li>
+                            </ul>
+                        </div>
+                        <a href="/support/ide-setup/arm-mdk/" class="product-link btn btn-primary">Setup Guide</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <img src="/images/svg/debugger-setup.svg" alt="Debugger Setup Icon" width="64" height="64">
+                        </div>
+                        <h3 class="product-title">Debugger Setup</h3>
+                        <p class="product-description">
+                            Configuration instructions for various debugging tools compatible with Sinowealth MCUs.
+                        </p>
+                        <div class="product-features">
+                            <ul>
+                                <li>USB debugger drivers</li>
+                                <li>IDE integration</li>
+                                <li>Hardware setup</li>
+                                <li>Troubleshooting</li>
+                            </ul>
+                        </div>
+                        <a href="/support/ide-setup/debugger/" class="product-link btn btn-primary">Setup Guide</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <img src="/images/svg/toolchain.svg" alt="Toolchain Setup Icon" width="64" height="64">
+                        </div>
+                        <h3 class="product-title">Toolchain Setup</h3>
+                        <p class="product-description">
+                            Guide to setting up alternative toolchains and development environments.
+                        </p>
+                        <div class="product-features">
+                            <ul>
+                                <li>Open-source alternatives</li>
+                                <li>Command-line tools</li>
+                                <li>Build systems</li>
+                                <li>Integration steps</li>
+                            </ul>
+                        </div>
+                        <a href="/support/ide-setup/toolchain/" class="product-link btn btn-primary">Setup Guide</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Setup Process -->
+        <section class="support-process">
+            <div class="container">
+                <h2 class="section-title">IDE Setup Process</h2>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Download Software</h3>
+                        <p class="step-description">Download the appropriate IDE for your target MCU (Keil C51 for 8-bit, ARM MDK for 32-bit).</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Install IDE</h3>
+                        <p class="step-description">Follow the installation instructions and apply necessary licenses for commercial use.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Install Device Support</h3>
+                        <p class="step-description">Download and install Sinowealth device support packs with proper device definitions.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Configure Project</h3>
+                        <p class="step-description">Set up project options including device selection, memory models, and compiler settings.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <h3 class="step-title">Connect Debugger</h3>
+                        <p class="step-description">Install debugger drivers and configure debugging interface to target hardware.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <h3 class="step-title">Verify Setup</h3>
+                        <p class="step-description">Create a simple test project to verify the entire setup is working correctly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Detailed Setup Guides -->
+        <section class="selection-comparison">
+            <div class="container">
+                <h2 class="section-title">Detailed Setup Guides</h2>
+                
+                <div class="guide-section">
+                    <h3>Keil C51 Setup for 8-bit Sinowealth MCUs</h3>
+                    <div class="guide-content">
+                        <h4>System Requirements</h4>
+                        <ul>
+                            <li>Windows 7/8/10/11 (64-bit recommended)</li>
+                            <li>Minimum 4GB RAM (8GB recommended)</li>
+                            <li>At least 10GB free disk space</li>
+                            <li>Internet connection for updates</li>
+                        </ul>
+                        
+                        <h4>Installation Steps</h4>
+                        <ol>
+                            <li>Download the latest version of Keil C51 from the official ARM website</li>
+                            <li>Run the installer with administrator privileges</li>
+                            <li>Select components to install (ensure "8051 Toolchain" is selected)</li>
+                            <li>Complete the installation process</li>
+                            <li>Apply a valid license or request a trial license</li>
+                            <li>Download and install Sinowealth device support package</li>
+                        </ol>
+                        
+                        <h4>Project Configuration</h4>
+                        <p>For 8-bit Sinowealth MCUs:</p>
+                        <ul>
+                            <li>In New Project wizard, select "Sinowealth" from the manufacturer list</li>
+                            <li>Select your specific device (e.g., "SH79F166A")</li>
+                            <li>Configure memory settings according to your device's flash and RAM</li>
+                            <li>Set appropriate compiler optimizations for your application</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="guide-section">
+                    <h3>ARM MDK Setup for 32-bit Sinowealth MCUs</h3>
+                    <div class="guide-content">
+                        <h4>System Requirements</h4>
+                        <ul>
+                            <li>Windows 7/8/10/11 (64-bit recommended)</li>
+                            <li>Minimum 8GB RAM (16GB recommended)</li>
+                            <li>At least 20GB free disk space</li>
+                            <li>Internet connection for CMSIS updates</li>
+                        </ul>
+                        
+                        <h4>Installation Steps</h4>
+                        <ol>
+                            <li>Download the latest version of ARM MDK from the official ARM website</li>
+                            <li>Run the installer with administrator privileges</li>
+                            <li>Select components to install (ensure "ARM Compiler" and CMSIS are selected)</li>
+                            <li>Complete the installation process</li>
+                            <li>Apply a valid license or request a trial license</li>
+                            <li>Install Sinowealth device support through Pack Installer</li>
+                        </ol>
+                        
+                        <h4>Project Configuration</h4>
+                        <p>For 32-bit Sinowealth MCUs:</p>
+                        <ul>
+                            <li>Use the Pack Installer to install Sinowealth device support</li>
+                            <li>Select the correct ARM Cortex-M0 device from the device database</li>
+                            <li>Configure CMSIS libraries for your application</li>
+                            <li>Set appropriate linker script for your device's memory layout</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="guide-section">
+                    <h3>Debugger Configuration</h3>
+                    <div class="guide-content">
+                        <h4>Sinowealth Debugger Setup</h4>
+                        <p>The Sinowealth development tools support various debugging interfaces:</p>
+                        <ul>
+                            <li>Sinowealth USB debugger for 8-bit MCUs</li>
+                            <li>ARM-compatible debuggers for 32-bit MCUs (J-Link, ULINK, etc.)</li>
+                            <li>SWD interface for 32-bit devices</li>
+                            <li>Serial bootloader for code download</li>
+                        </ul>
+                        
+                        <h4>Driver Installation</h4>
+                        <ol>
+                            <li>Install the USB driver for your debugger hardware</li>
+                            <li>Ensure the debugger is recognized by the system (check Device Manager)</li>
+                            <li>Configure the debugger interface in your IDE (Tools → Options → Debug)</li>
+                            <li>Set the correct interface protocol (SWD for 32-bit, specific protocol for 8-bit)</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAE Recommendation -->
+        <section class="technical-note">
+            <div class="container">
+                <div class="note-card">
+                    <h3 class="note-title">FAE Recommendation</h3>
+                    <p class="note-content">
+                        <strong>For 8-bit Sinowealth MCUs:</strong> We recommend using Keil C51 with the 
+                        latest device support pack specifically designed for Sinowealth. Make sure to 
+                        configure the memory model appropriately for your application size. 
+                        <strong>For 32-bit MCUs:</strong> ARM MDK provides the most comprehensive support 
+                        for Sinowealth 32-bit devices. Ensure you have the latest CMSIS updates and 
+                        Sinowealth device packs installed. For debugging, use the SWD interface for 
+                        reliable performance.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Troubleshooting Section -->
+        <section class="product-applications">
+            <div class="container">
+                <h2 class="section-title">Common Setup Issues & Solutions</h2>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Issue</th>
+                                <th>Probable Cause</th>
+                                <th>Solution</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Device not recognized</td>
+                                <td>Missing or incorrect device support pack</td>
+                                <td>Install the correct Sinowealth device support pack</td>
+                            </tr>
+                            <tr>
+                                <td>Debugger not connecting</td>
+                                <td>Driver or interface configuration issue</td>
+                                <td>Check USB driver installation and interface settings</td>
+                            </tr>
+                            <tr>
+                                <td>Compiler errors</td>
+                                <td>Incorrect project configuration or toolchain</td>
+                                <td>Verify project settings match your target device</td>
+                            </tr>
+                            <tr>
+                                <td>Memory overflow</td>
+                                <td>Code size exceeds device memory</td>
+                                <td>Optimize code or select a device with more memory</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content text-center">
+                    <h2 class="cta-title">Need Help with IDE Setup?</h2>
+                    <p class="cta-description">Contact our FAE team for detailed setup assistance</p>
+                    <div class="cta-buttons">
+                        <a href="/contact/" class="btn btn-primary btn-lg">Contact FAE Team</a>
+                        <a href="/support/request/" class="btn btn-outline-primary btn-lg">Request Setup Support</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="/products/mcu-8bit/">8-bit MCU</a></li>
+                        <li><a href="/products/mcu-32bit/">32-bit MCU</a></li>
+                        <li><a href="/products/bms/">BMS Solutions</a></li>
+                        <li><a href="/products/display-drivers/">Display Drivers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Solutions</h3>
+                    <ul class="footer-links">
+                        <li><a href="/solutions/ebike-bms/">E-bike BMS</a></li>
+                        <li><a href="/solutions/refrigerator-control/">Refrigerator Control</a></li>
+                        <li><a href="/solutions/smart-appliance/">Smart Appliances</a></li>
+                        <li><a href="/solutions/vacuum-motor-control/">Motor Control</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="/support/selection-guides/">Selection Guides</a></li>
+                        <li><a href="/support/app-notes/">Application Notes</a></li>
+                        <li><a href="/support/ide-setup/">IDE Setup</a></li>
+                        <li><a href="/faq/">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                        <li>WhatsApp: +86 15013702378</li>
+                        <li>WeChat: +86 18612518271</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 Litong. Authorized Sinowealth Distributor. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="/privacy-policy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="/js/utils.js"></script>
+    <script src="/js/components.js"></script>
+    <script src="/js/main.js"></script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Sinowealth IDE Setup Guide - Keil C51, ARM MDK Configuration",
+      "description": "Complete setup guide for development environments for Sinowealth MCUs. Keil C51, ARM MDK, and toolchain installation guides.",
+      "url": "https://sinowealth.elec-distributor.com/support/ide-setup/",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://sinowealth.elec-distributor.com/"
+        }, {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": "https://sinowealth.elec-distributor.com/support/"
+        }, {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "IDE Setup",
+          "item": "https://sinowealth.elec-distributor.com/support/ide-setup/"
+        }]
+      }
+    }
+    </script>
+</body>
+</html>

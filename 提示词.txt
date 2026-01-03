@@ -1,0 +1,121 @@
+提示词：开发“Sinowealth Distributor” (中颖代理) 专业分销商网站
+做一个“Sinowealth distributor” (中颖电子代理) 核心关键词的网站，
+绑定网站域名是 sinowealth.elec-distributor.com
+框架 HTML + CSS (原生开发，无框架依赖)。在 Cloudflare Pages 部署。
+1. SEO 与 Meta 标签优化
+网站需进行深度百度及谷歌SEO优化。URL结构必须清晰、静态化，包含面包屑导航。生成用于SEO的sitemap.xml。
+所有页面Meta标签必须定制。所有图片添加包含关键词的 alt 属性。
+Title (标题): Sinowealth Distributor_Authorized Sinowealth Agent_Litong (中颖代理商_授权一级中颖电子代理_力通)
+Description (描述): 力通 (Litong) 是中颖电子 (Sinowealth) 官方授权一级代理商，供应中颖 8-bit/32-bit MCU、锂电池管理芯片 (BMS)、OLED显示驱动芯片等全系列产品。提供原装正品、技术支持、BOM配单及优势价格。
+Keywords (关键词): Sinowealth distributor, 中颖代理, Sinowealth MCU, 中颖代理商, SH36700 distributor (3-5个最核心)
+关键词布局 (Keyword Mapping):
+核心关键词: Sinowealth distributor, 中颖代理商
+核心词 + 国际地域: Sinowealth distributor USA, Sinowealth distributor India, Sinowealth distributor Korea, Sinowealth distributor Germany, Sinowealth distributor Vietnam.
+产品 + 核心词: Sinowealth MCU distributor (中颖MCU代理), Sinowealth BMS distributor (中颖锂电管理芯片代理), Sinowealth OLED Driver distributor.
+资质 + 核心词: Authorized Sinowealth distributor (中颖授权代理), Official Sinowealth agent.
+问题型长尾词: How to choose Sinowealth MCU (如何选中颖MCU), Sinowealth cross reference (中颖替代料), Sinowealth datasheet download.
+页面关键词策略:
+首页: 集中优化 Sinowealth distributor, 中颖代理商。
+产品列表页: 优化 "Sinowealth MCU", "Sinowealth BMS" + Distributor。
+产品详情页: 优化具体型号 (如 SH79F166A, SH36700) + Price/Distributor。
+解决方案页: 优化 "E-bike BMS Solution", "Home Appliance Control" + Sinowealth。
+技术文章: 优化 "Sinowealth programming guide", "SH79F series compilation".
+2. 首页要求
+打造专业、内容丰富、高转化率的B2B首页：
+英雄横幅 (Hero Banner): 极具视觉冲击力，文案强调“Sinowealth Authorized Distributor - Empowering Smart Home & Battery Management” (中颖授权代理 - 赋能智能家居与电池管理)。
+核心优势 (Why Choose Us): 展示竞争力：原厂技术支持、现货库存、极具竞争力的价格（Cost-effective）、快速交付。
+核心产品领域 (Core Product Areas): 按类别展示：家电MCU、锂电池管理 (BMS)、电机控制、显示驱动。
+解决方案与应用 (Solutions): 展示重点市场：小家电 (Small Home Appliances)、电动两轮车 (E-bike)、电动工具 (Power Tools)、智能穿戴。
+最新动态 (Latest News): 展示中颖最新发布芯片或行业缺货/行情资讯。
+最终行动号召 (Final CTA): 底部引导用户“获取报价”或“联系工程师”。
+3. 产品中心 (Product Center)
+按产品分类列表展示:
+重点分类包括：8-bit MCU, 32-bit MCU, 锂电池管理芯片 (BMS), 显示驱动 (Display Driver)。
+每个分类需提供详尽的中文/英文介绍、关键参数、典型型号、优势对比。
+产品型号表格:
+每个分类下细分型号表格 (Table)。
+表格列包含：Model (型号), Core (内核 - e.g., 8051, ARM Cortex-M0), Flash Size, RAM, Package (封装), Application (应用)。每列均支持筛选。
+结构化数据与内容增强:
+Schema.org: 型号表格页必须嵌入 Product Schema JSON-LD 标记。
+数据来源: 确保数据（如 SH79F系列, SH36700系列）符合官网真实参数。
+原创描述 (Top Description): 在H1下方增加200-300字描述。例如介绍中颖在白色家电MCU市场的统治地位，或其BMS芯片在电动自行车市场的优势。融入 "Sinowealth MCU selection" 等词。
+选型指南入口: 醒目链接指向文章《如何为您的家电产品选择合适的中颖MCU？》。
+代理商点评: 加入FAE点评，例如“SH79F166A 是目前性价比最高的电磁炉主控方案”。
+替代/配套: 提供替代欧美品牌的建议（Cross Reference）及配套周边料号。
+FAQ模块: 针对该类目回答3-5个常见问题（如：开发工具下载、烧录器支持）。
+多样化 CTA: "下载选型手册", "申请样品", "批量报价", "技术咨询"。
+4. 技术支持 (Support)
+分类: 选型指南 (Selection Guides), 应用笔记 (App Notes), 开发环境搭建 (IDE Setup).
+标签系统 (Tags): 为文章打标签，如：8051, ARM Cortex-M0, BMS, SH36700, SH79F, Keil C51。点击标签可聚合内容。
+上下文链接: 提到型号（如 SH36700）自动链接至产品页；提到技术（如 ADC采样）链接至相关技术文章。
+相关文章: 文章底部自动推荐3篇相关内容。
+作者简介: 为FAE创建作者页（包含照片、擅长领域：如BMS算法、电机FOC控制），增强E-E-A-T信任度。
+5. 解决方案 (Solutions)
+发布5个针对性解决方案，URL独立。
+建议主题:
+电动两轮车BMS保护板方案 (E-bike BMS Solution) - 基于SH36700系列。
+变频冰箱控制板方案 (Inverter Refrigerator Control) - 基于32-bit MCU + 电机驱动。
+智能小家电/空气炸锅方案 (Smart Air Fryer) - 基于SH79F系列。
+AMOLED手机屏维修/替换方案 - 基于中颖显示驱动芯片。
+手持吸尘器电机控制方案 (Handheld Vacuum Motor Control)。
+内容要求:
+摘要: 包含核心关键词。
+结构: 方案框图 (Block Diagram - 必须配图并加alt)、核心优势、推荐BOM清单 (链接至产品页)、应用场景。
+6. 新闻中心 (News)
+区分栏目: “公司新闻” (内部) 与 “行业动态” (外部SEO)。
+行业动态内容: 围绕 “国产MCU替代”、“BMS芯片缺货趋势”、“智能家电市场分析” 撰写。引用权威数据并加入中颖代理商的视角。
+Schema: 使用 NewsArticle Schema 标记，争取富媒体摘要。
+7. 内容深度与结构要求 (所有详情页)
+新闻/解决方案/技术支持详情页: 每篇不少于800字。内容需专业、详实，解决工程师实际痛点。
+排版: 模块化布局，优化字体可读性。
+标题: SEO友好的 H1, H2, H3 标签。
+CTA: 结尾必须包含“联系分销商”行动号召。
+发布数量: 新闻、解决方案、技术支持各发布5篇。
+侧边栏: 包含相关文章推荐及联系方式。
+8. 关于与联系 (About & Contact)
+关于我们: 介绍公司作为中颖电子 (Sinowealth) 授权代理的历史、FAE团队实力、库存能力。
+联系我们: 采用网格布局。将 contact.txt 内容整合。
+侧边栏联系:
+WhatsApp: +86 15013702378
+WeChat: +86 18612518271
+9. 内部链接策略
+技术文章提到具体芯片型号 -> 链接至产品详情页。
+产品页 -> 链接至对应的解决方案或应用笔记。
+构建紧密的 Internal Linking 网络，提升爬虫抓取效率。
+10. 视觉设计与SVG生成
+矢量图标 (SVG): 生成一套由于 Sinowealth 产品线匹配的图标：
+MCU: 芯片引脚图。
+BMS: 电池/闪电图标。
+Display: 屏幕/波形图标。
+Home Appliance: 房屋/家电图标。
+背景图: 生成科技蓝/中性灰为主的抽象电路板线条、芯片晶圆纹理背景 SVG。
+Logo: 设计基于 "Sinowealth Distributor" 或 "Litong" 的简洁文字/几何 SVG Logo。
+配图: 列表页和详情页均需生成匹配的占位图或示意图。
+11. 响应式与UI设计规范
+设计风格: 现代极简主义。
+配色: 主色调科技蓝 (#0072ce)，辅助色中性灰 (#f8f9fa)，CTA按钮橙色。
+布局: CSS Grid (12列) + Flexbox。
+移动优先: 确保手机端 (100%宽度) 浏览体验完美，触控区域 > 44px。
+交互: 按钮悬停变色/上浮，卡片悬停阴影加深 (box-shadow)，导航栏滚动固定。
+性能: CSS变量管理颜色，WebP图片格式，字体加载优化。
+无障碍: 符合 WCAG AA 对比度标准。
+12. 网站结构 (Site Architecture)
+Home (首页)
+Products (产品中心)
+8-bit MCU
+32-bit MCU
+Battery Management (BMS)
+Display Drivers
+(每个分类下含型号表格页)
+Solutions (解决方案 - 5篇详情)
+E-bike BMS
+Home Appliances
+...
+Support (技术支持 - 5篇详情)
+Selection Guides
+App Notes
+...
+News (新闻中心 - 5篇详情)
+FAQ (常见问题)
+About Us (关于我们)
+Contact Us (联系我们)

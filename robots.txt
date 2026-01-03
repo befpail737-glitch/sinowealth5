@@ -1,0 +1,24 @@
+# robotstxt.org/
+
+User-agent: *
+Allow: /
+
+# Sitemap files
+Sitemap: https://sinowealth.elec-distributor.com/sitemap.xml
+
+# Crawl-delay: 10
+
+# Host
+Host: sinowealth.elec-distributor.com
+
+# Disallow specific directories
+Disallow: /private/
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /uploads/
+
+# Specific sitemap for different sections
+Sitemap: https://sinowealth.elec-distributor.com/sitemap_products.xml
+Sitemap: https://sinowealth.elec-distributor.com/sitemap_solutions.xml
+Sitemap: https://sinowealth.elec-distributor.com/sitemap_support.xml
