@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <rect width="200" height="60" fill="transparent"/>
+  <g transform="translate(30,30)">
+    <rect x="-15" y="-15" width="30" height="30" rx="5" transform="rotate(45)" fill="#0072ce"/>
+    <circle cx="0" cy="0" r="8" fill="white"/>
+  </g>
+  <text x="70" y="36" font-family="Arial, sans-serif" font-size="20" fill="#333">Sinowealth Distributor</text>
+</svg>
