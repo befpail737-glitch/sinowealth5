@@ -30,6 +30,160 @@
     <link rel="stylesheet" href="/css/responsive.css">
     <link rel="stylesheet" href="/css/utilities.css">
 
+    <!-- Custom Contact Page Styles -->
+    <style>
+        .contact-grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .region-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .location-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .location-card h4 {
+            color: #2c3e50;
+            margin-top: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .location-address {
+            font-style: normal;
+            line-height: 1.6;
+            color: #34495e;
+            margin: 0.5rem 0;
+        }
+
+        .location-contact {
+            margin-top: 1rem;
+        }
+
+        .location-contact a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .location-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .region-section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .region-title {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .region-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 30px;
+            background: #3498db;
+            border-radius: 4px;
+        }
+
+        .contact-sidebar {
+            position: sticky;
+            top: 2rem;
+        }
+
+        .sidebar-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-option {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .contact-option:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .contact-option h4 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-option p {
+            color: #7f8c8d;
+            margin: 0.25rem 0;
+        }
+
+        .qr-placeholder {
+            background: #f8f9fa;
+            border: 1px dashed #bdc3c7;
+            border-radius: 4px;
+            padding: 1rem;
+            text-align: center;
+            color: #95a5a6;
+            margin-top: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #3498db;
+            border-radius: 3px;
+        }
+    </style>
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
